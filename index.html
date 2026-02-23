@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>
+            📇 Agenda de contatos
+            <span id="totalContatosSpan">0</span>
+        </h1>
+
+        <!-- FILTRAR CONTATOS -->
+        <div class="filter-section">
+            <label for="filterInput">🔍 Filtrar contatos:</label>
+            <div class="filter-input-wrapper">
+                <span class="search-icon">🔎</span>
+                <input type="text" id="filterInput" placeholder="Digite parte do nome..." autocomplete="off">
+                <button class="clear-filter" id="clearFilterBtn" title="Limpar filtro">✕</button>
+            </div>
+            <div class="total-badge" id="totalDisplay">total: <span id="totalCount">0</span></div>
+        </div>
+
+        <!-- CADASTRO -->
+        <div class="register-card">
+            <div class="register-title">
+                <span class="title-icon">✚</span> Cadastrar novo contato
+                <span class="cancel-edit-btn" id="cancelEditBtn">✕ Cancelar edição</span>
+            </div>
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Nome</label>
+                    <input type="text" id="nomeInput" placeholder="Ex: Joana Silva">
+                </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" id="emailInput" placeholder="nome@email.com">
+                </div>
+                <div class="input-group">
+                    <label>Telefone</label>
+                    <input type="tel" id="telefoneInput" placeholder="(11) 99999-9999">
+                </div>
+                <button class="btn-primary" id="cadastrarBtn">
+                    <span class="btn-icon">💾</span> Cadastrar
+                </button>
+            </div>
+        </div>
+
+        <!-- TABELA DE CONTATOS -->
+        <div class="table-container">
+            <table id="contatosTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th style="text-align: center;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Será preenchido via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div class="footer-info">
+            ⚡ Clique em ✏️ para alterar · 🗑️ para excluir
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
